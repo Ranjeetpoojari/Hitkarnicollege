@@ -67,7 +67,7 @@
                                     
                                     <div class="sign-label text-center">
                                   <input type="file" class="form-control" id="imageUploads"  placeholder="ENTER YOUR SURNAME HERE .. "  >
-                                  <img src="assets\image-gallery.png" alt="" srcset="" class="sign_icon"> <p>&nbsp; Sign max:50kb</p>
+                                  <img src="assets\image-gallery.png" alt="" srcset="" class="sign_icon"> <label for="imageUploads">&nbsp; Sign max:50kb</label>
                                   <span id="signError" class="error"></span>
                                 </div>
                                 <span id="imageContainers" class="d-inline-block"></span>
@@ -105,6 +105,11 @@
                                     <input type="text" class="form-control" id="abc_id"  placeholder="Academic Bank odf Creadit..">
                                     <span id="abc_idError" class="error"></span>
                                   </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="Ua_formno" class="form-label required">Univercity Application Form no</label>
+                                    <input type="text" class="form-control" id="Ua_formno"  placeholder="Univercity Application Form no..">
+                                    <span id="Ua_formnoError" class="error"></span>
+                                  </div>
                                 </div>
                              <button id="nextButton" value="next" class="nextButton">Next</button>
                               </div>
@@ -116,8 +121,9 @@
                     <div class="col-12 col-md-6 mt-3">
                         <h5 class="text-center fw-bold">Your Contact Details</h5>
                         <div class="mb-3 form-groups">
-                            <label for="address" class="form-label">Address</label>
-                            <textarea class="form-control" placeholder="Type here.." id="floatingTextarea" row="3"></textarea>
+                            <label for="ownaddress" class="form-label">Address</label>
+                            <textarea class="form-control" placeholder="Type here.." id="ownaddress" row="3"></textarea>
+                            <span id="ownaddressError" class="error"></span>
                           </div>
                           <div class="mb-3 form-groups">
                             <label for="mobile" class="form-label required">Mobile number</label>
@@ -265,50 +271,7 @@
                       <div class="row">
                         <div class="col-12 mt-3">
                           <h5 class="text-center fw-bold required">Academic Record:</h5>
-                          <div class="table-responsive">
-                            <table class="table table-bordered mb-3">
-                              <thead>
-                                <tr>
-                                  <th scope="col" class="text-center">Examination</th>
-                                  <th scope="col" class="text-center">Name and Place of Institute</th>
-                                  <th scope="col" class="text-center">Board</th>
-                                  <th scope="col" class="text-center">Date of Result</th>
-                                  <th scope="col" class="text-center">Exam Seat No.</th>
-                                  <th scope="col" class="text-center">Class Obtained </th>
-                                  <th scope="col" class="text-center">Marks Obtain</th>
-                                  <th scope="col" class="text-center">Total Marks</th>
-                                  <th scope="col" class="text-center">Percentage</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">hsc</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                 
-                                  
-                                 
-                                </tr>
-                                <tr>
-                                  <th scope="row">HSC</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>  
-                              </tbody>
-                            </table>
-                          </div>
+                    
                          
                         </div>
                         <div class="row">
@@ -455,6 +418,7 @@
                             <div class="mb-3 form-groups">
                               <label for="address_last_attended" class="form-label required">School/College last attended</label>
                               <textarea class="form-control" placeholder="Type here.." id="address_last_attended" row="3"></textarea>
+                           <span></span>
                             </div>
                           </div>
                           <div class="col-12 col-md-6">

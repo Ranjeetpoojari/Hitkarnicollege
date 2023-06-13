@@ -56,11 +56,13 @@ $(document).ready(function() {
         var fathername = $('#fathername').val();
         var photo = $('#imageUpload').val();
         var abc_id = $('#abc_id').val();
+        var Ua_formno = $('#Ua_formno').val();
         var sign = $('#imageUploads').val();
         var Alphabets = /[a-zA-Z\s]+/;
         var num_pattern = /^\d{12}$/;
         var isValid = true;
         // Validate name field
+        var Form_app_parttern = /^(?=.*[A-Z])(?=.*\d)[A-Z\d]{12}$/;
 
             if (surname.trim() === '') {
                 $('#surnameError').text('Surname is required.');
@@ -129,9 +131,9 @@ $(document).ready(function() {
                 isValid = false;
             } else {
                 $('#signError').text('');
-                
+
+
             }
-         
             if (abc_id.trim() === '') {
                 $('#abc_idError').text('Academic bank crdits is required.');
                 isValid = false;
@@ -139,8 +141,14 @@ $(document).ready(function() {
                 $('#abc_idError').text('Only numbers are allowed min maximum 12');
             } 
             else {$('#abc_idError').text('');
-    
-    
+        }
+            if (Ua_formno.trim() === '') {
+                $('#Ua_formnoError').text('Univecity Application form number is required.');
+                isValid = false;
+            }else if (!Form_app_parttern.test(Ua_formno)){
+                $('#Ua_formnoError').text('Please fill this info currectly..');
+            } 
+            else {$('#Ua_formnoError').text('');
         }
     
         if(isValid){
@@ -164,6 +172,7 @@ $(document).ready(function() {
         var email = $('#email').val();
         var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         var num_pattern = /^\d{10}$/;
+        var ownaddress = $('#ownaddress').val();
         // var telno = $('#telno').val();
         // var parentno = $('#parentno').val();
         // Validate name 
@@ -178,6 +187,12 @@ $(document).ready(function() {
            console.log('valid');
            $('#numberError').hide();
            isValid = true;
+        }
+        if (ownaddress.trim() === '') {
+            $('#ownaddressError').text('Your Address is required.');
+            isValid = false;
+        } else {
+            $('#ownaddressError').text('');
         }
         if(email.trim() === ''){
             $('#emailError').text('Email id is required.');

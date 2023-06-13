@@ -294,9 +294,11 @@ form input,
     height: 30px;
 }
 
-.form-group-img .sign-label p {
+.form-group-img .sign-label label {
     position: absolute;
     left: 50px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .photo-label {

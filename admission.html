@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/theme.css"> -->
+    <title>HitKarni College</title>
+</head>
+
+<body>
+<!-- carousel -->
+  
+    <div class="container">
+        <div class="row mt-5">
+            <div class="logo d-flex justify-content-center">
+                <img src="assets\colege_logo.png" class="" alt="">
+            </div>
+            <div class="college-info">
+                <p class="text-uppercase text-center fw-bold">SEVA FOUNDATION’S</p>
+                <h2 class="text-uppercase text-center fw-bold">Hitkarni College of Commerce, Mumbai </h2>
+                <p class="text-capitalize text-center fw-bold">(Affiliated to University of Mumbai)</p>
+                <address class="text-capitalize text-center fw-bold">Lallu Bhai Compound, Mankhurd- 400 043</address>
+            </div>
+            <form action="" class="college_form" id="collegeRegistration">
+                <h1 class="text-center">Registration</h1>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">Personal info</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                            type="button" id="nextButton" disabled>Contact info</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false" disabled >Other Info</button>
+                        <button class="nav-link" id="nav-Qulification-tab" data-bs-toggle="tab" data-bs-target="#nav-Qulification"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false" disabled >Qulification</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active my-5 home_details" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <p class="mt-4"> </p>
+                        <div class="row">
+                          <div class="col-12 col-md-6">
+                            <div class="mb-5 form-groups">
+                                <div class="form-group-img">
+                                    <div for="photo" class="photo-label">
+                                      <img src="assets\image-gallery.png" alt="" class="photo_icon" srcset="">
+                                      <p class="text-center"> Affix I Card Size Photograph maximum 500kb</p> 
+                                      <input type="file"  class="form-control"  placeholder="ENTER YOUR SURNAME HERE .. " id="imageUpload" >
+                                      <span id="photoError" style="color:red;" class="error"></span>
+                                    </div>
+                                    <span id="imageContainer" class="d-inline-block"></span>
+                                    
+                                    <div class="sign-label text-center">
+                                  <input type="file" class="form-control" id="imageUploads"  placeholder="ENTER YOUR SURNAME HERE .. "  >
+                                  <img src="assets\image-gallery.png" alt="" srcset="" class="sign_icon"> <p>&nbsp; Sign max:50kb</p>
+                                  <span id="signError" class="error"></span>
+                                </div>
+                                <span id="imageContainers" class="d-inline-block"></span>
+                              </div>
+                            </div>
+                          </div>
+                            <div class="col-12 mt-3 col-md-6">
+                                <div class="mb-3 form-groups">
+                                    <label for="Surname" class="form-label">Surname</label>
+                                    <input type="text" class="form-control" name="surname" id="surname"  placeholder="ENTER YOUR SURNAME HERE .. ">
+                                    <span id="surnameError" class="error"></span>
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="firstname" class="form-label required">First Name</label>
+                                    <input type="text" class="form-control" name="firstname" id="firstname"  placeholder="ENtTER YOUR FIRST NAME HERE .. ">
+                                    <span id="firstnameError" class="error"></span>
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="mother" class="form-label required">Mother's Name</label>
+                                    <input type="text" class="form-control" name="mothername" id="mothername"  placeholder="ENtTER YOUR MOTHER'S NAME HERE .. ">
+                                    <span id="motherError" class="error"></span>
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="fathername" class="form-label required">Father's Name</label>
+                                    <input type="text" class="form-control" name="fathername" id="fathername"  placeholder="ENtTER YOUR FATHER AME HERE .. ">
+                                    <span id="fatherError" class="error"></span>
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="pra_no" class="form-label"> PNR no:-</label>
+                                    <input type="text" class="form-control" id="pra_no" name="pra_no" placeholder="Type">
+                                    <span id="parError" class="error"></span>
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="abc_id" class="form-label required">ABC ID</label>
+                                    <input type="text" class="form-control" id="abc_id"  placeholder="Academic Bank odf Creadit..">
+                                    <span id="abc_idError" class="error"></span>
+                                  </div>
+                                </div>
+                             <button id="nextButton" value="next" class="nextButton">Next</button>
+                              </div>
+                    </div>
+                   
+                    <div class="tab-pane fade con_details" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">     
+                  <div class="row">
+                  
+                    <div class="col-12 col-md-6 mt-3">
+                        <h5 class="text-center fw-bold">Your Contact Details</h5>
+                        <div class="mb-3 form-groups">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea class="form-control" placeholder="Type here.." id="floatingTextarea" row="3"></textarea>
+                          </div>
+                          <div class="mb-3 form-groups">
+                            <label for="mobile" class="form-label required">Mobile number</label>
+                            <input type="text" class="form-control" id="number"  placeholder="Enter your phone number"></div>
+                            <span id="numberError" class="error"></span>
+                            
+                            <div class="mb-3 form-groups">
+                              <label for="tel" class="form-label"> Tel no :-</label>
+                              <input type="text" class="form-control" id="tel"  placeholder="Enter your Telphone number">
+                              <span id="telError" class="error"></span>
+                            </div>
+                            <div class="mb-3 form-groups">
+                              <label for="tel" class="form-label required"> Email id</label>
+                              <input type="email" class="form-control" id="email"  placeholder="Enter your email">
+                              <span id="emailError" class="error"></span>
+                              
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 mt-3">
+                            <h5 class="text-center fw-bold">Your Parent's Details</h5>
+                            <div class="mb-3 form-groups">
+                              <label for="native_place" class="form-label">Native Place</label>
+                              <textarea class="form-control" placeholder="Type here.." id="floatingTextarea" id="native_place" row="3"></textarea>
+                            </div>
+                            <div class="mb-3 form-groups">
+                              <label for="parent_num" class="form-label">Parent's number</label>
+                              <input type="text" class="form-control" id="parent_num"  placeholder="Enter your parents number..."></div>
+                              <span id="parent_numError" class="error"></span>
+                            </div>
+                            <button id="changeButton" class="nextButton" >Next </button>
+                          </div>
+                        </div>
+                      
+                    <div class="tab-pane fade other_details" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mt-3">
+                          <div class="mb-3">
+                            <label for="" class="form-label required">Caste</label><br>
+                            <input type="radio"   name="caste" id="open">
+                            <label for="open" class="form-label" >Open</label> &nbsp;&nbsp;
+                            <input type="radio"  id="sc" name="caste">
+                            <label for="sc" class="form-label">SC</label> &nbsp;&nbsp;
+                            <input type="radio"  id="obc" name="caste">
+                            <label for="obc" class="form-label">OBC</label> &nbsp;&nbsp;
+                            <input type="radio"  id="vj" name="caste">
+                            <label for="vj" class="form-label">VJ</label> &nbsp;&nbsp;
+                            <input type="radio"  id="nt" name="caste">
+                            <label for="nt" class="form-label">NT</label> &nbsp;&nbsp;
+                            <input type="radio"  id="sbc" name="caste">
+                            <label for="sbc" class="form-label">SBC</label> &nbsp;&nbsp;
+                            <input type="radio"  id="st" name="caste">
+                            <label for="st" class="form-label">ST</label> &nbsp;&nbsp;
+                            <br>
+                            <span id="casteError" class="error"></span>
+                          </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label required">Gender</label><br>
+                                <input type="radio"   name="gender" id="Male">
+                                <label for="Male" class="form-label" >Male</label> &nbsp;&nbsp;
+                                <input type="radio"  id="Female" name="gender">
+                                <label for="Female" class="form-label">Female</label> &nbsp;&nbsp;
+                                <input type="radio"  id="trans" name="gender">
+                                <label for="trans" class="form-label">Transgender</label> &nbsp;&nbsp;
+                               <br>
+                                <span id="Gennerror" class="error"></span>
+                             
+                              </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label required"> Marital Status:</label><br>
+                                <input type="radio"  name="marital_status" id="married">
+                                <label for="married" class="form-label" >Married</label> &nbsp;&nbsp;
+                                <input type="radio"  id="unmarried" name="marital_status">
+                                <label for="unmarried" class="form-label">Unmarried</label> &nbsp;&nbsp;
+                                <div class="mb-3 form-groups">
+                                    <label for="dob" class="form-label required">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob">
+                                    <span id="dobError" class="error"></span>
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="pob" class="form-label required">Place of Birth</label>
+                                    <input type="text" class="form-control" placeholder="Place of Birth..." id="pob">
+                                    <span id="pobError" class="error"></span>
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="District" class="form-label">District:-</label>
+                                    <input type="text" class="form-control" placeholder="District" id="district">
+                                    <span id="districtError" class="error"></span>
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="state" class="form-label">State:-</label>
+                                    <input type="text" class="form-control" placeholder="State" id="state">
+                                    <span id="stateError" class="error"></span>
+
+                                  </div>
+                                  <div class="mb-3 form-groups">
+                                    <label for="caste" class="form-label">Caste:-</label>
+                                    <input type="text" class="form-control" placeholder="Caste" id="Caste">
+                                    <span id="CasteError" class="error"></span>
+                                    <p class="form-text mb-2">Whether belongs to Scheduled Caste/Scheduled Tribe/ Nomadic Tribes/ Other Backward Classes. 
+                                      If so mention the cast and sub caste. (attach copy of certificate)</p>
+                                    </div>
+                                    <div class="mb-3 form-groups">
+                                      <label for="Religion" class="form-label">Religion:</label>
+                                      <input type="text" class="form-control" placeholder="Religion" id="religion">
+                                      <span id="religionError" class="error"></span>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                        <div class="col-12 col-md-6 mt-3">
+                            <div class="mb-3 form-groups">
+                                <label for="gaurdian" class="form-label">Full Name of Father/Mother/Gaurdian</label>
+                                <input type="text" class="form-control" placeholder="Full name of Gaurdian ..." id="gaurdian">
+                                <span id="gaurdianError" class="error"></span>
+                              </div>
+                            <div class="mb-3 form-groups">
+                                <label for="Occupation" class="form-label">Guardian’s Occupation: </label>
+                                <input type="text" class="form-control" placeholder="Guardian’s Occupation ... " id="Occupation">
+                                <span id="OccupationError" class="error"></span>
+                              </div>
+                              <div class="mb-3 form-groups">
+                                <label for="relation" class="form-label">Relation:</label>
+                                <input type="text" class="form-control" placeholder="Relation.... " id="relation">
+                                <span id="relationError" class="error"></span>
+                              </div>
+                              <div class="mb-3 form-groups">
+                                <label for="telphone_gard" class="form-label">Tel: no </label>
+                                <input type="text" class="form-control" id="officetel" placeholder="Telphone number..." id="telphone_gard">
+                                <span id="officeError" class="error"></span>
+                              </div>
+                              <div class="mb-3 form-groups">
+                                <label for="add_of_place_work" class="form-label">Working place address:- </label>
+                                <textarea class="form-control" placeholder="Type here.." id="add_of_place_work" row="3"></textarea>
+                              </div>
+                              <div class="mb-3 form-groups">
+                                <label for="income" class="form-label">Family Income per year (from all sources) Rs. :</label>
+                                <input class="form-control" placeholder="Type here.." id="income">
+                                <span id="incomeError" class="error"></span>
+                              </div>
+                            </div>
+                            <input type="button" value="Next" id="changesButton" class="nextButton">
+                          </div>                 
+                    </div>
+                    <div class="tab-pane fade education" id="nav-Qulification" role="tabpanel" aria-labelledby="nav-Qulification-tab">
+                      <div class="row">
+                        <div class="col-12 mt-3">
+                          <h5 class="text-center fw-bold required">Academic Record:</h5>
+                          <div class="table-responsive">
+                            <table class="table table-bordered mb-3">
+                              <thead>
+                                <tr>
+                                  <th scope="col" class="text-center">Examination</th>
+                                  <th scope="col" class="text-center">Name and Place of Institute</th>
+                                  <th scope="col" class="text-center">Board</th>
+                                  <th scope="col" class="text-center">Date of Result</th>
+                                  <th scope="col" class="text-center">Exam Seat No.</th>
+                                  <th scope="col" class="text-center">Class Obtained </th>
+                                  <th scope="col" class="text-center">Marks Obtain</th>
+                                  <th scope="col" class="text-center">Total Marks</th>
+                                  <th scope="col" class="text-center">Percentage</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">hsc</th>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                 
+                                  
+                                 
+                                </tr>
+                                <tr>
+                                  <th scope="row">HSC</th>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>  
+                              </tbody>
+                            </table>
+                          </div>
+                         
+                        </div>
+                        <div class="row">
+                          <div class="row">
+                            <h5 class="text-start fw-bold my-5 required">SSC Record:</h5>
+                            <div class="col-12 col-md-6 col-lg-4">
+                              <div class="mb-3 form-groups">
+                                <label for="ssc_place" class="form-label required">Name and Place of Institute: </label>
+                                <input type="text" class="form-control" placeholder="Please Enter Here .." id="ssc_place">
+                                <span id="ssc_placeError" class="error"></span>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                              <div class="mb-3 form-groups">
+                                <label for="ssc_borad" class="form-label required"> Board: </label>
+                                <input type="text" class="form-control" placeholder="Please Enter Here .." id="ssc_borad">
+                                <span id="ssc_boradError" class="error"></span>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                              <div class="mb-3 form-groups">
+                                <label for="ssc_dor" class="form-label required"> Date of Result:- </label>
+                                <input type="date" class="form-control" placeholder="Board...." id="ssc_dor">
+                                <span id="ssc_dorError" class="error"></span>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                              <div class="mb-3 form-groups">
+                                <label for="ssc_esn" class="form-label required">Exam Seat No. </label>
+                                <input type="text" class="form-control" placeholder="Exam Seat No....." id="ssc_esn">
+                                <span id="ssc_esnError" class="error"></span>
+                              </div>
+                            </div>
+                            
+                            <div class="col-12 col-md-6 col-lg-4">
+                              <div class="mb-3 form-groups">
+                                <label for="ssc_obtain" class="mb-2">Class Obtain</label>
+                                <select class="form-select" id="ssc_obtain" aria-label="Default select example">
+                                  <option selected value="A">A</option>
+                                  <option value="B">B</option>
+                                  <option value="C">C</option>
+                                  <option value="D">D</option>
+                                  <option value="E">E</option>
+                                </select>
+                              </div>
+                            </div>
+      
+                            <div class="col-12 col-md-6 col-lg-4">
+                              <div class="mb-3 form-groups">
+                                <label for="ssc_markobtn" class="required form-label"> Marks Obtain: </label>
+                                <input type="text" class="form-control" placeholder="Please Enter Here .." id="ssc_markobtn">
+                                <span id="ssc_markobtnError" class="error"></span>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                              <div class="mb-3 form-groups">
+                                <label for="ssc_tm" class="form-label required"> Total Marks	: </label>
+                                <input type="text" class="form-control" placeholder="Class Obtained.." id="ssc_tm">
+                                <span id="ssc_tmError" class="error"></span>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                              <div class="mb-3 form-groups">
+                                <label for="ssc_per" class="form-label required"> Percentage: </label>
+                                <input type="text" class="form-control" placeholder="Class Obtained.." id="ssc_per">
+                                <span id="ssc_perError" class="error"></span>
+                              </div>
+                            </div>
+                          </div>
+                    <div class="row">
+                      <h5 class="text-start fw-bold my-5 required">HSC Record:</h5>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="mb-3 form-groups">
+                          <label for="hsc_place" class="form-label required"> Name and Place of Institute: </label>
+                          <input type="text" class="form-control" placeholder="Please Enter Here .." id="hsc_place">
+                          <span id="hsc_placeError" class="error"></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="mb-3 form-groups">
+                          <label for="hsc_borad" class="form-label required"> Board: </label>
+                          <input type="text" class="form-control" placeholder="Please Enter Here .." id="hsc_borad">
+                          <span id="#hsc_boradError" class="error"></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="mb-3 form-groups">
+                          <label for="hsc_dor" class="form-label required">Date of Result:- </label>
+                          <input type="date" class="form-control" placeholder="Please Enter Here .." id="hsc_dor">
+                          <span id="hsc_dorError" class="error"></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="mb-3 form-groups">
+                          <label for="hsc_esn" class="form-label required">Exam Seat No. </label>
+                          <input type="text" class="form-control" placeholder="Exam Seat No....." id="hsc_esn">
+                          <span id="hsc_esnError" class="error"></span>
+                        </div>
+                      </div>
+                      
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="mb-3 form-groups">
+                          <label for="hsc_obtain" class="mb-2">Class Obtain</label>
+                          <select class="form-select" id="hsc_obtain" aria-label="Default select example">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="mb-3 form-groups">
+                          <label for="hsc_markobtn" class="form-label required"> Marks Obtain: </label>
+                          <input type="text" class="form-control" placeholder="Please Enter Here .." id="hsc_markobtn">
+                          <span id="hsc_markobtnError" class="error"></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="mb-3 form-groups">
+                          <label for="hsc_tm" class="form-label required"> Total Marks	: </label>
+                          <input type="text" class="form-control" placeholder="Class Obtained.." id="hsc_tm">
+                          <span id="hsc_tmError" class="error"></span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="mb-3 form-groups">
+                          <label for="hsc_per" class="form-label required"> Percentage: </label>
+                          <input type="text" class="form-control" placeholder="Class Obtained.." id="hsc_per">
+                          <span id="hsc_perError" class="error"></span>
+                        </div>
+                      </div>
+                    </div>
+                          <div class="col-12 col-md-6">
+                            <div class="mb-3 form-groups">
+                              <label for="hsc_marksno" class="form-label required">H.S.C Mark Sheet no: </label>
+                              <input type="text" class="form-control" placeholder="Please Enter Here .." id="hsc_marksno">
+                              <span id="hsc_marknoError" class="error"></span>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="mb-3 form-groups">
+                              <label for="address_last_attended" class="form-label required">School/College last attended</label>
+                              <textarea class="form-control" placeholder="Type here.." id="address_last_attended" row="3"></textarea>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="mb-3 form-groups">
+                              <label for="University" class="form-label required">University/Board</label>
+                              <input type="text" class="form-control" placeholder="Type here.." id="University">
+                              <span id="UniversityError" class="error"></span>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="mb-3 form-groups">
+                              <label for="last_year" class="form-label required">Year:</label>
+                              <input type="text" class="form-control" placeholder="Type here.." id="last_year">
+                              <span id="last_yearError" class="error"></span>
+                            </div>
+                          </div>
+                      
+  
+                   
+                          <p>I desire to offer the following Subjects :  (Indicate by *Mark)</p>
+                          <p class="fw-bold text-space text-center text-sm-start">The information furnished in this form is true to be best of my knowledge, and I am aware that my admission will stand cancelled if any of the information is found to be incorrect.</p>
+                        <p class="text-end mb-5">Yours Obediently,</p>
+                       
+                        </div>
+                        <hr>
+                        <h5 class="text-center fw-bold my-4 text-uppcase">FOR THE GUARDIAN</h5>
+                        <p class="fw-bold text-space text-center text-sm-start">I have permitted my ward to join your College and shall see that he/ she observe the rules of the College. In particular I shall be vigilant to ensure that he/ she attends the minimum of 75% lectures and practical. I also state that the detail of the information supplied by him/her in this application is correct</p>
+                        <div class="mb-3 form-groups">
+                          <input type="checkbox" name="agree"  id="agree">
+                          <label for="agree">I Agree all the guidlines</label>
+                          <span id="selectagreeError" class="error"></span>
+                        </div>
+                        <div class="mb-3 form-groups">
+                          <input type="submit" class="form-control" id="submit" placeholder="Please Enter Here .." >
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  
+                </div>
+                
+            </form>
+
+        </div>
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- owl-carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
